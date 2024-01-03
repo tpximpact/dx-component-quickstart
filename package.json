@@ -99,7 +99,7 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "format": "prettier --cache --write './**/*.{ts,tsx,scss,css,json,md,mdx}'",
-    "lint": "eslint './**/*.{js,jsx,ts,tsx}' --max-warnings 0",
+    "lint": "tsc && eslint './**/*.{js,jsx,ts,tsx}' --max-warnings 0",
     "lint-css": "stylelint --allow-empty-input '**/*.{css,scss}'",
     "test-storybook": "test-storybook --coverage --maxWorkers=3",
     "prepare": "husky install",
