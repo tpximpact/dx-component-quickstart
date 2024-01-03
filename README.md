@@ -56,3 +56,6 @@ This file allows developers to pass in mockup content to the component that will
 #### {componentName}.scss
 
 This is where component styling is defined using SASS/CSS.
+
+do we need rollup?
+why so many dependencies? Can we cut this list down a bit?
