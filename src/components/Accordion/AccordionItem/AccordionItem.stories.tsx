@@ -15,6 +15,7 @@ type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
   args: {
-    ...AccordionItem.defaultProps,
+    summary: "Accordion Item",
+    body: "Content for Accordion Item",
   },
 };

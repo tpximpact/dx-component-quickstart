@@ -34,9 +34,3 @@ export default function Accordion({
     </section>
   );
 }
-
-Accordion.defaultProps = {
-  title: "Example title",
-  body: "Example body",
-  accordionItems: Array(12).fill(AccordionItem.defaultProps),
-};

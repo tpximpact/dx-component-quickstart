@@ -23,8 +23,3 @@ export default function Video({
     </video>
   );
 }
-
-Video.defaultProps = {
-  videoSrc: "myVideo.mp4",
-  posterImage: "",
-};

@@ -26,11 +26,3 @@ export default function Button({ url, label }: ButtonProps): ReactElement {
     </button>
   );
 }
-
-Button.defaultProps = {
-  label: "Button",
-  buttonlinkprops: {
-    label: "Button",
-    url: "#",
-  },
-};

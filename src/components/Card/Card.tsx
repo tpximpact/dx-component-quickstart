@@ -69,9 +69,3 @@ export default function Card({
     </li>
   );
 }
-
-Card.defaultProps = {
-  title: "Example title",
-  body: "Example body text",
-  image: Image.defaultProps,
-};

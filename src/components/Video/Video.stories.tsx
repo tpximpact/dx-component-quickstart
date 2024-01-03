@@ -15,6 +15,7 @@ type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
   args: {
-    ...Video.defaultProps,
+    videoSrc: "myVideo.mp4",
+    posterImage: "",
   },
 };

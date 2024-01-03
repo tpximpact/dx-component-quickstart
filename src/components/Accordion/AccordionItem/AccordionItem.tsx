@@ -28,8 +28,3 @@ export default function AccordionItem({
     </details>
   );
 }
-
-AccordionItem.defaultProps = {
-  summary: "Accordion Item",
-  body: "Content for Accordion Item",
-};
