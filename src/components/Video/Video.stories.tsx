@@ -1,13 +1,13 @@
-import type { Meta, StoryObj } from '@storybook/react';
-import Video from './Video';
+import type { Meta, StoryObj } from "@storybook/react";
+import Video from "./Video";
 
 const meta = {
-  title: 'Example/Video',
+  title: "Example/Video",
   component: Video,
   parameters: {
-    layout: 'centered'
+    layout: "centered",
   },
-  tags: ['autodocs']
+  tags: ["autodocs"],
 } satisfies Meta<typeof Video>;
 
 export default meta;
@@ -15,6 +15,6 @@ type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
   args: {
-    ...Video.defaultProps
-  }
+    ...Video.defaultProps,
+  },
 };

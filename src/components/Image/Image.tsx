@@ -1,4 +1,4 @@
-import React, { ReactElement } from 'react';
+import React, { ReactElement } from "react";
 
 export interface ImageProps {
   /**
@@ -30,15 +30,24 @@ export interface ImageProps {
    * The loading attribute is used to lazy load the image. If you need the image
    * to load quickly (example on a hero) then set loadingAttr to "eager"
    */
-  loadingAttr?: 'lazy' | 'eager' | undefined;
+  loadingAttr?: "lazy" | "eager" | undefined;
 }
 
-export default function Image({ src, size, width, height, altText, loadingAttr = 'lazy' }: ImageProps): ReactElement {
+export default function Image({
+  src,
+  size,
+  width,
+  height,
+  altText,
+  loadingAttr = "lazy",
+}: ImageProps): ReactElement {
   return (
     <img
       className="image"
       srcSet={`${src.small}, ${src.medium}, ${src.default}`}
-      sizes={`${size?.small ?? 576}w, ${size?.medium ?? 992}w, ${size?.default ?? 1440}w`}
+      sizes={`${size?.small ?? 576}w, ${size?.medium ?? 992}w, ${
+        size?.default ?? 1440
+      }w`}
       src={src.default}
       width={width}
       height={height}
@@ -50,11 +59,11 @@ export default function Image({ src, size, width, height, altText, loadingAttr =
 
 Image.defaultProps = {
   src: {
-    small: 'https://picsum.photos/600/600',
-    medium: 'https://picsum.photos/1200/1200',
-    default: 'https://picsum.photos/2400/2400'
+    small: "https://picsum.photos/600/600",
+    medium: "https://picsum.photos/1200/1200",
+    default: "https://picsum.photos/2400/2400",
   },
   width: 500,
   height: 500,
-  altText: 'An example image'
+  altText: "An example image",
 };

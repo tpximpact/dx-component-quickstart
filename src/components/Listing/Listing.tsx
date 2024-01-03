@@ -1,5 +1,5 @@
-import React, { ReactElement, ReactNode } from 'react';
-import './listing.scss';
+import React, { ReactElement, ReactNode } from "react";
+import "./listing.scss";
 
 export interface ListingProps {
   children: ReactNode;

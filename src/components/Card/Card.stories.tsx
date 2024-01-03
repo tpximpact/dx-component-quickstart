@@ -1,14 +1,14 @@
-import type { Meta, StoryObj } from '@storybook/react';
-import React from 'react';
-import Card from './Card';
+import type { Meta, StoryObj } from "@storybook/react";
+import React from "react";
+import Card from "./Card";
 
 const meta = {
-  title: 'Example/Card',
+  title: "Example/Card",
   component: Card,
   parameters: {
-    layout: 'centered'
+    layout: "centered",
   },
-  tags: ['autodocs']
+  tags: ["autodocs"],
 } satisfies Meta<typeof Card>;
 
 export default meta;
@@ -16,13 +16,13 @@ type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
   args: {
-    ...Card.defaultProps
+    ...Card.defaultProps,
   },
   decorators: [
     (Story) => (
       <ul>
         <Story />
       </ul>
-    )
-  ]
+    ),
+  ],
 };

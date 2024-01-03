@@ -1,8 +1,8 @@
-@use 'sass:math';
+@use "sass:math";
 
-@import './theme';
-@import './fonts';
-@import './colors';
+@import "./theme";
+@import "./fonts";
+@import "./colors";
 
 /*************************
 ** Breakpoints **
@@ -15,8 +15,8 @@ $lg: 1200px;
 ** Typography **
 *************************/
 
-$font-headline: 'Times New Roman', serif;
-$font-body: 'Verdana', sans-serif;
+$font-headline: "Times New Roman", serif;
+$font-body: "Verdana", sans-serif;
 $normal: 400;
 $bold: 700;
 

@@ -1,15 +1,15 @@
-import { expect } from '@storybook/jest';
-import type { Meta, StoryObj } from '@storybook/react';
-import { within } from '@storybook/testing-library';
-import Button from './Button';
+import { expect } from "@storybook/jest";
+import type { Meta, StoryObj } from "@storybook/react";
+import { within } from "@storybook/testing-library";
+import Button from "./Button";
 
 const meta = {
-  title: 'Example/Button',
+  title: "Example/Button",
   component: Button,
   parameters: {
-    layout: 'centered'
+    layout: "centered",
   },
-  tags: ['autodocs']
+  tags: ["autodocs"],
 } satisfies Meta<typeof Button>;
 
 export default meta;
@@ -17,16 +17,16 @@ type Story = StoryObj<typeof meta>;
 
 export const PrimaryButton: Story = {
   args: {
-    ...Button.defaultProps
+    ...Button.defaultProps,
   },
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
-    await expect(canvas.getByRole('button')).toBeInTheDocument();
-  }
+    await expect(canvas.getByRole("button")).toBeInTheDocument();
+  },
 };
 
 export const ButtonLink: Story = {
   args: {
-    ...Button.defaultProps.buttonlinkprops
-  }
+    ...Button.defaultProps.buttonlinkprops,
+  },
 };

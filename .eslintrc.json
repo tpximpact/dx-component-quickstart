@@ -38,7 +38,13 @@
       "version": "detect"
     }
   },
-  "plugins": ["@typescript-eslint", "react", "react-hooks", "prettier", "import"],
+  "plugins": [
+    "@typescript-eslint",
+    "react",
+    "react-hooks",
+    "prettier",
+    "import"
+  ],
   "rules": {
     "semi": 0,
     "comma-dangle": 0,

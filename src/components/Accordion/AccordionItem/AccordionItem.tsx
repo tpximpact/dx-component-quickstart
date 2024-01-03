@@ -1,5 +1,5 @@
-import React, { ReactElement } from 'react';
-import './accordionItem.scss';
+import React, { ReactElement } from "react";
+import "./accordionItem.scss";
 
 export interface AccordionItemProps {
   /**
@@ -12,7 +12,10 @@ export interface AccordionItemProps {
   body: string;
 }
 
-export default function AccordionItem({ summary, body }: AccordionItemProps): ReactElement {
+export default function AccordionItem({
+  summary,
+  body,
+}: AccordionItemProps): ReactElement {
   return (
     <details className="accordion-item">
       <summary className="accordion-item__summary">{summary}</summary>
@@ -22,6 +25,6 @@ export default function AccordionItem({ summary, body }: AccordionItemProps): Re
 }
 
 AccordionItem.defaultProps = {
-  summary: 'Accordion Item',
-  body: 'Content for Accordion Item'
+  summary: "Accordion Item",
+  body: "Content for Accordion Item",
 };

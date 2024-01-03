@@ -1,16 +1,16 @@
-import React from 'react';
-import type { Meta, StoryObj } from '@storybook/react';
-import { v4 as uuidv4 } from 'uuid';
-import Listing from './Listing';
-import Card from '../Card/Card';
+import React from "react";
+import type { Meta, StoryObj } from "@storybook/react";
+import { v4 as uuidv4 } from "uuid";
+import Listing from "./Listing";
+import Card from "../Card/Card";
 
 const meta = {
-  title: 'Example/Listing',
+  title: "Example/Listing",
   component: Listing,
   parameters: {
-    layout: 'centered'
+    layout: "centered",
   },
-  tags: ['autodocs']
+  tags: ["autodocs"],
 } satisfies Meta<typeof Listing>;
 
 export default meta;
@@ -22,6 +22,6 @@ const cards = Array(12)
 
 export const Primary: Story = {
   args: {
-    children: cards
-  }
+    children: cards,
+  },
 };

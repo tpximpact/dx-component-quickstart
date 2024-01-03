@@ -1,6 +1,6 @@
-import React, { ReactElement } from 'react';
-import useTheme from '../../hooks/useDarkMode';
-import './button.scss';
+import React, { ReactElement } from "react";
+import useTheme from "../../hooks/useDarkMode";
+import "./button.scss";
 
 export interface ButtonProps {
   label: string;
@@ -28,9 +28,9 @@ export default function Button({ url, label }: ButtonProps): ReactElement {
 }
 
 Button.defaultProps = {
-  label: 'Button',
+  label: "Button",
   buttonlinkprops: {
-    label: 'Button',
-    url: '#'
-  }
+    label: "Button",
+    url: "#",
+  },
 };
