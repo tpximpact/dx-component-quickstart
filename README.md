@@ -18,7 +18,7 @@ This is a component library foundation built using Storybook 7 and SASS.
 
 ### Setting up the project locally
 
-1. Clone the repo from Github: `git clone git@github.com:millnut/storybook_foundations.git`
+1. Clone the repo from Github: `git clone git@github.com:tpximpact/dx-component-quickstart.git`
 2. Install NPM Node Modules by running `npm install` from the project root
 
 ## Working locally on the project
