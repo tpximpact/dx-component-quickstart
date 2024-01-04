@@ -7,6 +7,7 @@ This is a component library foundation built using Storybook 7 and SASS.
 - [Installation and setup](#installation-and-setup)
 - [Working locally on the project](#working-locally-on-the-project)
 - [Creating Components](#creating-components)
+- [Automated testing](#automated-testing)
 
 ## Installation and setup
 
@@ -57,5 +58,14 @@ This file allows developers to pass in mockup content to the component that will
 
 This is where component styling is defined using SASS/CSS.
 
-do we need rollup?
-why so many dependencies? Can we cut this list down a bit?
+# Automated testing
+
+UI Testing integrated with Storybook is provided by Chromatic. To enable testing as part of the pipelined workflow, open the .github/workflows/ui-tests.yml file and remove the line `on: []` and uncomment the following lines:
+
+```
+# on:
+#   pull_request:
+#   workflow_dispatch:
+```
+
+You will also need to add a secret to the Github configuration for the repository `CHROMATIC_PROJECT_TOKEN`
