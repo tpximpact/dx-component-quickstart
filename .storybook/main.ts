@@ -1,69 +1,69 @@
-import type { StorybookConfig } from '@storybook/react-webpack5';
+import type { StorybookConfig } from "@storybook/react-webpack5";
 
 const config: StorybookConfig = {
   features: {
-    storyStoreV7: true
+    storyStoreV7: true,
   },
-  stories: ['../src/**/*.mdx', '../src/**/*.stories.@(js|jsx|mjs|ts|tsx)'],
-  staticDirs: ['../static'],
+  stories: ["../src/**/*.mdx", "../src/**/*.stories.@(js|jsx|mjs|ts|tsx)"],
+  staticDirs: ["../static"],
   addons: [
-    '@storybook/addon-links',
-    '@storybook/addon-essentials',
-    '@storybook/addon-a11y',
-    '@storybook/addon-interactions',
-    'storybook-addon-performance',
-    '@storybook/addon-coverage',
+    "@storybook/addon-links",
+    "@storybook/addon-essentials",
+    "@storybook/addon-a11y",
+    "@storybook/addon-interactions",
+    "storybook-addon-performance",
+    "@storybook/addon-coverage",
     {
-      name: '@storybook/addon-styling-webpack',
+      name: "@storybook/addon-styling-webpack",
       options: {
         rules: [
           {
             test: /\.s[ac]ss$/,
             sideEffects: true,
             use: [
-              require.resolve('style-loader'),
+              require.resolve("style-loader"),
               {
-                loader: require.resolve('css-loader'),
+                loader: require.resolve("css-loader"),
                 options: {
-                  importLoaders: 3
-                }
+                  importLoaders: 3,
+                },
               },
               {
-                loader: require.resolve('postcss-loader'),
+                loader: require.resolve("postcss-loader"),
                 options: {
-                  implementation: require.resolve('postcss')
-                }
+                  implementation: require.resolve("postcss"),
+                },
               },
-              require.resolve('resolve-url-loader'),
+              require.resolve("resolve-url-loader"),
               {
-                loader: require.resolve('sass-loader'),
+                loader: require.resolve("sass-loader"),
                 options: {
                   // Want to add more Sass options? Read more here: https://webpack.js.org/loaders/sass-loader/#options
-                  implementation: require.resolve('sass'),
+                  implementation: require.resolve("sass"),
                   sourceMap: true,
-                  sassOptions: {}
-                }
-              }
-            ]
-          }
-        ]
-      }
-    }
+                  sassOptions: {},
+                },
+              },
+            ],
+          },
+        ],
+      },
+    },
   ],
   framework: {
-    name: '@storybook/react-webpack5',
+    name: "@storybook/react-webpack5",
     options: {
       builder: {
         fsCache: true,
-        lazyCompilation: true
-      }
-    }
+        lazyCompilation: true,
+      },
+    },
   },
   docs: {
-    autodocs: 'tag'
+    autodocs: "tag",
   },
   core: {
-    disableTelemetry: true
-  }
+    disableTelemetry: true,
+  },
 };
 export default config;

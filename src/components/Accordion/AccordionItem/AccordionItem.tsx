@@ -1,7 +1,11 @@
-import React, { ReactElement } from 'react';
-import './accordionItem.scss';
+import React, { ReactElement } from "react";
+import "./accordionItem.scss";
 
 export interface AccordionItemProps {
+  /**
+   * Example ID
+   */
+  id: string;
   /**
    * Example summary
    */
@@ -12,16 +16,15 @@ export interface AccordionItemProps {
   body: string;
 }
 
-export default function AccordionItem({ summary, body }: AccordionItemProps): ReactElement {
+export default function AccordionItem({
+  id,
+  summary,
+  body,
+}: AccordionItemProps): ReactElement {
   return (
-    <details className="accordion-item">
+    <details className="accordion-item" data-id={id}>
       <summary className="accordion-item__summary">{summary}</summary>
       <p className="accordion-item__body">{body}</p>
     </details>
   );
 }
-
-AccordionItem.defaultProps = {
-  summary: 'Accordion Item',
-  body: 'Content for Accordion Item'
-};

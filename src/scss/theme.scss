@@ -1,16 +1,16 @@
-@use 'sass:map';
+@use "sass:map";
 
-@import './colors';
+@import "./colors";
 
 $themes: (
   light: (
     background-color: $white,
-    text-color: $black
+    text-color: $black,
   ),
   dark: (
     background-color: $black,
-    text-color: $white
-  )
+    text-color: $white,
+  ),
 );
 
 @mixin customize($arg: theme) {
@@ -29,11 +29,11 @@ $themes: (
     &.#{$prefix}--#{$theme} {
       $array-map: () !global;
       @each $key, $submap in $map {
-        $value: map.get(map.get($array, $theme), '#{$key}');
+        $value: map.get(map.get($array, $theme), "#{$key}");
         $array-map: map.merge(
           $array-map,
           (
-            $key: $value
+            $key: $value,
           )
         ) !global;
       }

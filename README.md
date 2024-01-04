@@ -7,6 +7,7 @@ This is a component library foundation built using Storybook 7 and SASS.
 - [Installation and setup](#installation-and-setup)
 - [Working locally on the project](#working-locally-on-the-project)
 - [Creating Components](#creating-components)
+- [Automated testing](#automated-testing)
 
 ## Installation and setup
 
@@ -17,7 +18,7 @@ This is a component library foundation built using Storybook 7 and SASS.
 
 ### Setting up the project locally
 
-1. Clone the repo from Github: `git clone git@github.com:millnut/storybook_foundations.git`
+1. Clone the repo from Github: `git clone git@github.com:tpximpact/dx-component-quickstart.git`
 2. Install NPM Node Modules by running `npm install` from the project root
 
 ## Working locally on the project
@@ -56,3 +57,15 @@ This file allows developers to pass in mockup content to the component that will
 #### {componentName}.scss
 
 This is where component styling is defined using SASS/CSS.
+
+# Automated testing
+
+UI Testing integrated with Storybook is provided by Chromatic. To enable testing as part of the pipelined workflow, open the .github/workflows/ui-tests.yml file and remove the line `on: []` and uncomment the following lines:
+
+```
+# on:
+#   pull_request:
+#   workflow_dispatch:
+```
+
+You will also need to add a secret to the Github configuration for the repository `CHROMATIC_PROJECT_TOKEN`

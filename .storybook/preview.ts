@@ -1,48 +1,48 @@
-import type { Preview } from '@storybook/react';
-import { withPerformance } from 'storybook-addon-performance';
-import '../src/scss/base.scss';
+import type { Preview } from "@storybook/react";
+import { withPerformance } from "storybook-addon-performance";
+import "../src/scss/base.scss";
 
 const customViewports = {
   mobile: {
-    name: 'Mobile',
+    name: "Mobile",
     styles: {
-      width: '360px',
-      height: '850px'
+      width: "360px",
+      height: "850px",
     },
-    type: 'mobile'
+    type: "mobile",
   },
   tablet: {
-    name: 'Tablet',
+    name: "Tablet",
     styles: {
-      width: '768px',
-      height: '1024px'
+      width: "768px",
+      height: "1024px",
     },
-    type: 'tablet'
+    type: "tablet",
   },
   desktop: {
-    name: 'Desktop',
+    name: "Desktop",
     styles: {
-      width: '1200px',
-      height: '700px'
+      width: "1200px",
+      height: "700px",
     },
-    type: 'desktop'
-  }
+    type: "desktop",
+  },
 };
 
 export const decorators = [withPerformance];
 
 const preview: Preview = {
   parameters: {
-    actions: { argTypesRegex: '^on[A-Z].*' },
+    actions: { argTypesRegex: "^on[A-Z].*" },
     controls: {
       matchers: {
         color: /(background|color)$/i,
-        date: /Date$/i
-      }
+        date: /Date$/i,
+      },
     },
-    layout: 'fullscreen',
-    viewport: { viewports: customViewports }
-  }
+    layout: "fullscreen",
+    viewport: { viewports: customViewports },
+  },
 };
 
 export default preview;

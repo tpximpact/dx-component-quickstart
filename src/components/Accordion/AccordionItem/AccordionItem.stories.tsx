@@ -1,13 +1,13 @@
-import type { Meta, StoryObj } from '@storybook/react';
-import AccordionItem from './AccordionItem';
+import type { Meta, StoryObj } from "@storybook/react";
+import AccordionItem from "./AccordionItem";
 
 const meta = {
-  title: 'Example/AccordionItem',
+  title: "Example/AccordionItem",
   component: AccordionItem,
   parameters: {
-    layout: 'centered'
+    layout: "centered",
   },
-  tags: ['autodocs']
+  tags: ["autodocs"],
 } satisfies Meta<typeof AccordionItem>;
 
 export default meta;
@@ -15,6 +15,8 @@ type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
   args: {
-    ...AccordionItem.defaultProps
-  }
+    id: "1",
+    summary: "Accordion Item",
+    body: "Content for Accordion Item",
+  },
 };
