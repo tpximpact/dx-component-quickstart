@@ -40,7 +40,6 @@ const preview: Preview = {
         date: /Date$/i,
       },
     },
-    layout: "fullscreen",
     viewport: { viewports: customViewports },
   },
 };
