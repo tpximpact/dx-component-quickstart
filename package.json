@@ -1,9 +1,9 @@
 {
-  "name": "@millnut/storybook-foundations",
+  "name": "@tpximpact/dx-component-quickstart",
   "version": "0.0.1",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/millnut/storybook_foundations.git"
+    "url": "git+https://github.com/tpximpact/dx-component-quickstart.git"
   },
   "source": "src/index.ts",
   "main": "dist/main.js",
@@ -84,6 +84,7 @@
     "@storybook/testing-library": "^0.2.2",
     "axe-playwright": "^1.2.3",
     "clsx": "^2.0.0",
+    "embla-carousel-react": "^8.0.0-rc18",
     "sanitize-html": "^2.11.0",
     "storybook-addon-performance": "^0.17.1",
     "uuid": "^9.0.1"
