@@ -50,12 +50,15 @@ const config: StorybookConfig = {
       },
     },
   ],
+  typescript: {
+    reactDocgen: "react-docgen",
+  },
   framework: {
     name: "@storybook/react-webpack5",
     options: {
       builder: {
-        fsCache: true,
-        lazyCompilation: true,
+        // FIXME: addon-coverage has issues with useSWC: true
+        useSWC: false,
       },
     },
   },
