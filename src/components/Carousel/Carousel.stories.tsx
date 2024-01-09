@@ -14,7 +14,7 @@ const meta = {
 } satisfies Meta<typeof Carousel>;
 
 export default meta;
-type Story = StoryObj<typeof meta>;
+type Story = StoryObj<typeof Carousel>;
 
 const cards = Array(12)
   .fill(null)
