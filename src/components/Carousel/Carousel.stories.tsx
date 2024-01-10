@@ -23,5 +23,12 @@ const cards = Array(12)
 export const Primary: Story = {
   args: {
     children: cards
-  }
+  },
+  decorators: [
+    (Story) => (
+      <div style={{ width: '400px' }}>
+        <Story />
+      </div>
+    )
+  ]
 };
