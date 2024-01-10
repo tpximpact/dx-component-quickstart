@@ -84,8 +84,8 @@
     "@storybook/testing-library": "^0.2.2",
     "axe-playwright": "^1.2.3",
     "clsx": "^2.0.0",
-    "embla-carousel-autoplay": "^8.0.0-rc19",
-    "embla-carousel-react": "^8.0.0-rc18",
+    "embla-carousel-autoplay": "^7.1.0",
+    "embla-carousel-react": "^7.1.0",
     "sanitize-html": "^2.11.0",
     "storybook-addon-performance": "^0.17.1",
     "uuid": "^9.0.1"
