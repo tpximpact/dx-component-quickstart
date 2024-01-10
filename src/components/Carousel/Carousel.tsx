@@ -9,13 +9,7 @@ export interface CarouselProps {
 }
 
 export default function Carousel({ children }: CarouselProps): ReactElement {
-  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: false }, [Autoplay()]);
-
-  useEffect(() => {
-    if (emblaApi) {
-      console.log(emblaApi.slideNodes()); // Access API
-    }
-  }, [emblaApi]);
+  const [emblaRef] = useEmblaCarousel({ loop: false }, [Autoplay()]);
 
   return (
     <div className="embla" ref={emblaRef}>
