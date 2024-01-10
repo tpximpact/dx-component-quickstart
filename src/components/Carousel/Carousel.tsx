@@ -15,7 +15,8 @@ export default function Carousel({ children }: CarouselProps): ReactElement {
     <div className="embla" ref={emblaRef}>
       <ul className="embla__container">
         {React.Children.map(children, (child) => (
-            <>{child}</>
+          // eslint-disable-next-line react/jsx-no-useless-fragment
+          <>{child}</>
         ))}
       </ul>
     </div>
