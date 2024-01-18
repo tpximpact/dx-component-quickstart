@@ -1,20 +1,21 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import Image from './Image';
+import Button from './Button';
 
 const meta = {
-  title: 'Example/Image',
-  component: Image,
+  title: 'Atoms/Button',
+  component: Button,
   parameters: {
     layout: 'centered'
   },
   tags: ['autodocs']
-} satisfies Meta<typeof Image>;
+} satisfies Meta<typeof Button>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
   args: {
-    ...Image.defaultProps
+    className: 'button',
+    children: 'Primary button'
   }
 };

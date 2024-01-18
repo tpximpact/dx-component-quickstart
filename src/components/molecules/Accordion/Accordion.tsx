@@ -1,5 +1,7 @@
 import React, { ReactElement } from 'react';
 import { v4 as uuidv4 } from 'uuid';
+import Heading from '../../atoms/Heading/Heading';
+import Text from '../../atoms/Text/Text';
 import AccordionItem, { AccordionItemProps } from './AccordionItem/AccordionItem';
 import './accordion.scss';
 
@@ -21,8 +23,12 @@ export interface AccordionProps {
 export default function Accordion({ title, body, accordionItems }: AccordionProps): ReactElement {
   return (
     <section className="accordion">
-      {title && <h2 className="accordion__title">{title}</h2>}
-      {body && <p className="accordion__body">{body}</p>}
+      {title && (
+        <Heading headingLevel="h2" className="accordion__title">
+          {title}
+        </Heading>
+      )}
+      {body && <Text className="accordion__body">{body}</Text>}
       {accordionItems.map((accordionItem) => (
         <AccordionItem summary={accordionItem.summary} body={accordionItem.body} key={uuidv4()} />
       ))}

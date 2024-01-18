@@ -3,7 +3,7 @@ import React from 'react';
 import Card from './Card';
 
 const meta = {
-  title: 'Example/Card',
+  title: 'Molecules/Card',
   component: Card,
   parameters: {
     layout: 'centered'
