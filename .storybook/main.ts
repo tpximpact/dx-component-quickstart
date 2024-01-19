@@ -14,6 +14,7 @@ const config: StorybookConfig = {
     "@storybook/addon-interactions",
     "storybook-addon-performance",
     "@storybook/addon-coverage",
+    "storybook-css-modules",
     {
       name: "@storybook/addon-styling-webpack",
       options: storybookAddonStylingWebpackConfig,

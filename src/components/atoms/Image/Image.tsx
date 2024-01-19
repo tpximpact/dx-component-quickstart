@@ -1,4 +1,5 @@
 import React, { ReactElement } from "react";
+import styles from "./image.module.scss";
 
 export interface ImageProps {
   /**
@@ -43,7 +44,7 @@ export default function Image({
 }: ImageProps): ReactElement {
   return (
     <img
-      className="image"
+      className={styles.image}
       srcSet={`${src.small}, ${src.medium}, ${src.default}`}
       sizes={`${size?.small ?? 576}w, ${size?.medium ?? 992}w, ${
         size?.default ?? 1440

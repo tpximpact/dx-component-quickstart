@@ -1,10 +1,11 @@
+import clsx from "clsx";
 import React, { ReactElement } from "react";
 import useTheme from "../../../hooks/useDarkMode";
 import Heading from "../../atoms/Heading/Heading";
 import Image, { ImageProps } from "../../atoms/Image/Image";
 import Link from "../../atoms/Link/Link";
 import Text from "../../atoms/Text/Text";
-import "./Card.scss";
+import styles from "./card.module.scss";
 
 export interface CardProps {
   /**
@@ -42,7 +43,7 @@ export default function Card({
   return (
     // eslint-disable-next-line jsx-a11y/click-events-have-key-events, jsx-a11y/no-noninteractive-element-interactions
     <li
-      className={`card theme--${theme.mode}`}
+      className={clsx(styles.card, `theme--${theme.mode}`)}
       onClick={(event) => {
         handleClick(event);
       }}
@@ -55,11 +56,11 @@ export default function Card({
           altText={image.altText}
         />
       )}
-      <span className="card__container">
+      <span className={styles.cardContainer}>
         {title && (
-          <Heading headingLevel="h2" className="card__title">
+          <Heading headingLevel="h2" className={styles.cardTitle}>
             {url ? (
-              <Link className="card__link" href={url}>
+              <Link className={styles.cardLink} href={url}>
                 {title}
               </Link>
             ) : (
@@ -67,7 +68,7 @@ export default function Card({
             )}
           </Heading>
         )}
-        {body && <Text className="card__body">{body}</Text>}
+        {body && <Text className={styles.cardBody}>{body}</Text>}
       </span>
     </li>
   );

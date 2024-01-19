@@ -1,4 +1,5 @@
 import React, { ReactElement } from "react";
+import styles from "./video.module.scss";
 
 export interface VideoProps {
   videoSrc: string;
@@ -12,7 +13,7 @@ export default function Video({
   // const videoRef = useRef(null);
   // const [isPlaying, setIsPlaying] = useState(false);
   return (
-    <video className="video-player" poster={posterImage}>
+    <video className={styles.videoPlayer} poster={posterImage}>
       <source src={videoSrc} type="video/mp4" />
       <track
         src="captions_en.vtt"

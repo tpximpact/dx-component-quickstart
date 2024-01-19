@@ -1,5 +1,6 @@
+import clsx from "clsx";
 import React, { ReactElement, ReactNode } from "react";
-import "./button.scss";
+import styles from "./button.module.scss";
 
 type ButtonProps = {
   children: ReactNode;
@@ -11,7 +12,7 @@ export default function Button({
   children,
 }: ButtonProps): ReactElement {
   return (
-    <button type="button" className={className}>
+    <button type="button" className={clsx(className, styles.primary)}>
       {children}
     </button>
   );
