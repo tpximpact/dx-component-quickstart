@@ -7,10 +7,10 @@ import type { TestRunnerConfig } from "@storybook/test-runner";
  * to learn more about the test-runner hooks API.
  */
 const a11yConfig: TestRunnerConfig = {
-  async preRender(page) {
+  async preVisit(page) {
     await injectAxe(page);
   },
-  async postRender(page) {
+  async postVisit(page) {
     await checkA11y(page, "#storybook-root", {
       detailedReport: true,
       detailedReportOptions: {
