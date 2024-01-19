@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react";
 import TextImage from "./TextImage";
 
 const meta = {
-  title: "Example/TextImage",
+  title: "Molecules/TextImage",
   component: TextImage,
   parameters: {
     layout: "centered",

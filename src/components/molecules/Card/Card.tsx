@@ -1,6 +1,9 @@
 import React, { ReactElement } from "react";
-import useTheme from "../../hooks/useDarkMode";
-import Image, { ImageProps } from "../Image/Image";
+import useTheme from "../../../hooks/useDarkMode";
+import Heading from "../../atoms/Heading/Heading";
+import Image, { ImageProps } from "../../atoms/Image/Image";
+import Link from "../../atoms/Link/Link";
+import Text from "../../atoms/Text/Text";
 import "./Card.scss";
 
 export interface CardProps {
@@ -54,17 +57,17 @@ export default function Card({
       )}
       <span className="card__container">
         {title && (
-          <h2 className="card__title">
+          <Heading headingLevel="h2" className="card__title">
             {url ? (
-              <a className="card__link" href={url}>
+              <Link className="card__link" href={url}>
                 {title}
-              </a>
+              </Link>
             ) : (
               title
             )}
-          </h2>
+          </Heading>
         )}
-        {body && <p className="card__body">{body}</p>}
+        {body && <Text className="card__body">{body}</Text>}
       </span>
     </li>
   );

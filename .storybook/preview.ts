@@ -40,8 +40,12 @@ const preview: Preview = {
         date: /Date$/i,
       },
     },
-    layout: "fullscreen",
     viewport: { viewports: customViewports },
+    options: {
+      storySort: {
+        order: ["Atoms", "Molecules", "Organisms", "Pages"],
+      },
+    },
   },
 };
 

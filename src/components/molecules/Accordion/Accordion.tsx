@@ -1,4 +1,6 @@
 import React, { ReactElement } from "react";
+import Heading from "../../atoms/Heading/Heading";
+import Text from "../../atoms/Text/Text";
 import AccordionItem, {
   AccordionItemProps,
 } from "./AccordionItem/AccordionItem";
@@ -26,10 +28,19 @@ export default function Accordion({
 }: AccordionProps): ReactElement {
   return (
     <section className="accordion">
-      {title && <h2 className="accordion__title">{title}</h2>}
-      {body && <p className="accordion__body">{body}</p>}
+      {title && (
+        <Heading headingLevel="h2" className="accordion__title">
+          {title}
+        </Heading>
+      )}
+      {body && <Text className="accordion__body">{body}</Text>}
       {accordionItems.map((accordionItem) => (
-        <AccordionItem key={accordionItem.id} {...accordionItem} />
+        <AccordionItem
+          key={accordionItem.id}
+          id={accordionItem.id}
+          summary={accordionItem.summary}
+          body={accordionItem.body}
+        />
       ))}
     </section>
   );
