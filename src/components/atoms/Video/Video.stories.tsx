@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react";
 import Video from "./Video";
 
 const meta = {
-  title: "Example/Video",
+  title: "Atoms/Video",
   component: Video,
   parameters: {
     layout: "centered",

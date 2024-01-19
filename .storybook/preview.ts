@@ -41,6 +41,11 @@ const preview: Preview = {
       },
     },
     viewport: { viewports: customViewports },
+    options: {
+      storySort: {
+        order: ["Atoms", "Molecules", "Organisms", "Pages"]
+      }
+    }
   },
 };
 
