@@ -1,9 +1,9 @@
 {
-  "name": "@millnut/storybook-foundations",
+  "name": "@tpximpact/dx-component-quickstart",
   "version": "0.0.1",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/millnut/storybook_foundations.git"
+    "url": "git+https://github.com/tpximpact/dx-component-quickstart.git"
   },
   "source": "src/index.ts",
   "main": "dist/main.js",
@@ -115,11 +115,5 @@
       "npm run format",
       "npm run lint-css"
     ]
-  },
-  "bugs": {
-    "url": "https://github.com/millnut/storybook_foundations/issues"
-  },
-  "readme": "ERROR: No README data found!",
-  "homepage": "https://github.com/millnut/storybook_foundations#readme",
-  "_id": "@millnut/storybook-foundations@0.0.1"
+  }
 }
