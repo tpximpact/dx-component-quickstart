@@ -1,9 +1,8 @@
 name: "UI Tests"
 
-on: []
-# on:
-#   pull_request:
-#   workflow_dispatch:
+on:
+  pull_request:
+  workflow_dispatch:
 
 jobs:
   # Install and cache npm dependencies
@@ -54,24 +53,24 @@ jobs:
             "npx wait-on --timeout 5000 tcp:127.0.0.1:6006 && npm run test-storybook"
 
   # Run visual and composition tests with Chromatic
-  visual-and-composition:
-    runs-on: ubuntu-latest
-    needs: install-cache
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0 # Required to retrieve git history
-      - name: Restore npm dependencies
-        uses: actions/cache@v3
-        id: npm-cache
-        with:
-          path: |
-            node_modules
-          key: ${{ runner.os }}-npm-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-npm
-      - name: Publish to Chromatic
-        uses: chromaui/action@v1
-        with:
-          # Grab this from the Chromatic manage page
-          projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+  # visual-and-composition:
+  #   runs-on: ubuntu-latest
+  #   needs: install-cache
+  #   steps:
+  #     - uses: actions/checkout@v4
+  #       with:
+  #         fetch-depth: 0 # Required to retrieve git history
+  #     - name: Restore npm dependencies
+  #       uses: actions/cache@v3
+  #       id: npm-cache
+  #       with:
+  #         path: |
+  #           node_modules
+  #         key: ${{ runner.os }}-npm-${{ hashFiles('**/package-lock.json') }}
+  #         restore-keys: |
+  #           ${{ runner.os }}-npm
+  #     - name: Publish to Chromatic
+  #       uses: chromaui/action@v1
+  #       with:
+  #         # Grab this from the Chromatic manage page
+  #         projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
