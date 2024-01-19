@@ -5,7 +5,7 @@ import Listing from './Listing';
 import Card from '../Card/Card';
 
 const meta = {
-  title: 'Example/Listing',
+  title: 'Molecules/Listing',
   component: Listing,
   parameters: {
     layout: 'centered'

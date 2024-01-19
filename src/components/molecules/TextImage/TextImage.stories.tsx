@@ -1,20 +1,20 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import Video from './Video';
+import TextImage from './TextImage';
 
 const meta = {
-  title: 'Example/Video',
-  component: Video,
+  title: 'Molecules/TextImage',
+  component: TextImage,
   parameters: {
     layout: 'centered'
   },
   tags: ['autodocs']
-} satisfies Meta<typeof Video>;
+} satisfies Meta<typeof TextImage>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
   args: {
-    ...Video.defaultProps
+    ...TextImage.defaultProps
   }
 };

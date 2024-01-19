@@ -16,6 +16,9 @@ const config: StorybookConfig = {
     {
       name: '@storybook/addon-styling-webpack',
       options: {
+        storySort: {
+          order: ['Atoms', 'Molecules', 'Organisms', 'Pages']
+        },
         rules: [
           {
             test: /\.s[ac]ss$/,

@@ -1,7 +1,9 @@
 import React, { ReactElement } from 'react';
-import useTheme from '../../hooks/useDarkMode';
-import Image, { ImageProps } from '../Image/Image';
+import useTheme from '../../../hooks/useDarkMode';
+import Heading from '../../atoms/Heading/Heading';
+import Image, { ImageProps } from '../../atoms/Image/Image';
 import './textImage.scss';
+import Text from '../../atoms/Text/Text';
 
 export interface TextImageProps {
   /**
@@ -24,8 +26,12 @@ export default function TextImage({ title, body, image }: TextImageProps): React
     <section className={`text-image theme--${theme.mode}`}>
       {image.src && <Image src={image.src} width={400} height={400} altText={image.altText} />}
       <div className="text-image__content">
-        {title && <h2 className="text-image__title">{title}</h2>}
-        {body && <p className="text-image__body">{body}</p>}
+        {title && (
+          <Heading headingLevel="h2" className="text-image__title">
+            {title}
+          </Heading>
+        )}
+        {body && <Text className="text-image__body">{body}</Text>}
       </div>
     </section>
   );
