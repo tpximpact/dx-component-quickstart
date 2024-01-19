@@ -37,6 +37,7 @@ export default function Accordion({
       {accordionItems.map((accordionItem) => (
         <AccordionItem
           key={accordionItem.id}
+          id={accordionItem.id}
           summary={accordionItem.summary}
           body={accordionItem.body}
         />
@@ -44,9 +45,3 @@ export default function Accordion({
     </section>
   );
 }
-
-Accordion.defaultProps = {
-  title: "Example title",
-  body: "Example body",
-  accordionItems: Array(12).fill(AccordionItem.defaultProps),
-};

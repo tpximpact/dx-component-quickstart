@@ -15,6 +15,11 @@ type Story = StoryObj<typeof Accordion>;
 
 export const Primary: Story = {
   args: {
-    ...Accordion.defaultProps,
+    title: "Example title",
+    body: "Example body",
+    accordionItems: Array(12).fill({
+      summary: "Accordion Item",
+      body: "Content for Accordion Item",
+    }),
   },
 };

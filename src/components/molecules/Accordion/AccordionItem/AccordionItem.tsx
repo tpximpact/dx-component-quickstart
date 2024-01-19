@@ -29,9 +29,3 @@ export default function AccordionItem({
     </details>
   );
 }
-
-AccordionItem.defaultProps = {
-  id: "6be78ad9-f08a-4506-8d3d-ff5dabf48023",
-  summary: "Accordion Item",
-  body: "Content for Accordion Item",
-};
