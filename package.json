@@ -12,7 +12,7 @@
   "files": [
     "dist"
   ],
-  "license": "",
+  "license": "MIT",
   "devDependencies": {
     "@babel/preset-env": "^7.22.20",
     "@babel/preset-react": "^7.22.15",
