@@ -4,7 +4,7 @@ import Text from "../../atoms/Text/Text";
 import AccordionItem, {
   AccordionItemProps,
 } from "./AccordionItem/AccordionItem";
-import "./accordion.scss";
+import styles from "./accordion.module.scss";
 
 export interface AccordionProps {
   /**
@@ -27,13 +27,9 @@ export default function Accordion({
   accordionItems,
 }: AccordionProps): ReactElement {
   return (
-    <section className="accordion">
-      {title && (
-        <Heading headingLevel="h2" className="accordion__title">
-          {title}
-        </Heading>
-      )}
-      {body && <Text className="accordion__body">{body}</Text>}
+    <section className={styles.accordion}>
+      {title && <Heading headingLevel="h2">{title}</Heading>}
+      {body && <Text className={styles.accordionBody}>{body}</Text>}
       {accordionItems.map((accordionItem) => (
         <AccordionItem
           key={accordionItem.id}

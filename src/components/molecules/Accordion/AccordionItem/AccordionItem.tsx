@@ -1,6 +1,6 @@
 import React, { ReactElement } from "react";
 import Text from "../../../atoms/Text/Text";
-import "./accordionItem.scss";
+import styles from "./accordionItem.module.scss";
 
 export interface AccordionItemProps {
   /**
@@ -23,9 +23,9 @@ export default function AccordionItem({
   body,
 }: AccordionItemProps): ReactElement {
   return (
-    <details className="accordion-item" data-id={id}>
-      <summary className="accordion-item__summary">{summary}</summary>
-      <Text className="accordion-item__body">{body}</Text>
+    <details className={styles.accordionItem} data-id={id}>
+      <summary className={styles.accordionItemSummary}>{summary}</summary>
+      <Text className={styles.accordionItemBody}>{body}</Text>
     </details>
   );
 }

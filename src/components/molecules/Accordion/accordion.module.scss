@@ -1,7 +1,9 @@
 @import "../../../scss/lib";
 
 .accordion {
-  &__body {
+  padding: rem(20px);
+
+  &Body {
     margin-top: rem(20px);
   }
 }

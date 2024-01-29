@@ -1,8 +1,9 @@
 import React, { ReactElement } from "react";
+import clsx from "clsx";
 import useTheme from "../../../hooks/useDarkMode";
 import Heading from "../../atoms/Heading/Heading";
 import Image, { ImageProps } from "../../atoms/Image/Image";
-import "./textImage.scss";
+import styles from "./textImage.module.scss";
 import Text from "../../atoms/Text/Text";
 
 export interface TextImageProps {
@@ -27,7 +28,7 @@ export default function TextImage({
 }: TextImageProps): ReactElement {
   const theme = useTheme();
   return (
-    <section className={`text-image theme--${theme.mode}`}>
+    <section className={clsx(styles.textImage, `theme--${theme.mode}`)}>
       {image.src && (
         <Image
           src={image.src}
@@ -37,12 +38,8 @@ export default function TextImage({
         />
       )}
       <div className="text-image__content">
-        {title && (
-          <Heading headingLevel="h2" className="text-image__title">
-            {title}
-          </Heading>
-        )}
-        {body && <Text className="text-image__body">{body}</Text>}
+        {title && <Heading headingLevel="h2">{title}</Heading>}
+        {body && <Text>{body}</Text>}
       </div>
     </section>
   );
