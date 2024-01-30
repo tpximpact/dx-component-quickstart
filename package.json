@@ -84,6 +84,9 @@
   },
   "dependencies": {
     "clsx": "^2.0.0",
+    "embla-carousel-autoplay": "^7.1.0",
+    "embla-carousel-react": "^7.1.0",
+    "esbuild": "^0.20.0",
     "sanitize-html": "^2.11.0"
   },
   "overrides": {
