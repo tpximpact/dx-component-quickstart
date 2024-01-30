@@ -1,6 +1,6 @@
 @import "../../../scss/lib";
 
-.text-image {
+.textImage {
   @include customize(theme) {
     background: get-value(background-color);
     color: get-value(text-color);

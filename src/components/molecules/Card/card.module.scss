@@ -8,13 +8,21 @@
 
   list-style: none;
 
-  &__container {
+  &Container {
     display: flex;
     flex-direction: column;
     padding: rem(10px) rem(20px);
   }
 
-  &__body {
+  &Title {
+    font-size: 2rem;
+  }
+
+  &Body {
     margin-top: rem(10px);
+  }
+
+  &Link {
+    text-decoration: none;
   }
 }
