@@ -87,6 +87,7 @@
     "react-dom": "^18.2.0"
   },
   "dependencies": {
+    "mime": "^4.0.1",
     "sanitize-html": "^2.11.0"
   },
   "overrides": {
